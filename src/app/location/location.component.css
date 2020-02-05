@@ -1,0 +1,12 @@
+.btn-circle.btn-sm {
+  width: 10px;
+  height: 10px;
+  padding: 3px 0px;
+  border-radius: 25px;
+  font-size: 8px;
+  text-align: center;
+}
+.location {
+  display: block;
+  position: absolute;
+}
