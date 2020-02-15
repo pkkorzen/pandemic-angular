@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import locations from '../assets/locations.json';
 import {log} from 'util';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

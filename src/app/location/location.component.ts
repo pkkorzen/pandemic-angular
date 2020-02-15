@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, ElementRef, OnInit, AfterViewInit} from '@angular/core';
+
 // @ts-ignore
 
 @Component({
@@ -12,17 +13,16 @@ export class LocationComponent implements OnInit {
   @Input()
   color: string;
   @Input()
-  connections: string[];
+  connections: string;
   @Input()
   left: string;
   @Input()
   top: string;
   @Input()
   class: string;
-  constructor() {
+  constructor(private el: ElementRef) {
   }
 
   ngOnInit() {
   }
-
 }
