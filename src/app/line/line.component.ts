@@ -35,12 +35,12 @@ export class LineComponent implements OnInit, AfterViewChecked {
 
   }
   ngAfterViewChecked() {
-    setTimeout(() => {
-      this.leftLineCity = this.getLeftPosition();
-      this.topLineCity = this.getTopPosition();
+   // setTimeout(() => {
+     // this.leftLineCity = this.getLeftPosition();
+     // this.topLineCity = this.getTopPosition();
       // this.createLine();
      // console.log(this);
-    });
+   // });
   }
   getLeftPosition(): number {
     if (this.connection) {
