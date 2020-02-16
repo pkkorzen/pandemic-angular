@@ -10,11 +10,11 @@ export class PointCoordinatesService {
   constructor() {
     const width = window.innerWidth;
     const height = window.innerHeight;
+    this.map = new Map<string, Map<string, number>>();
     for (const location of locations) {
       const map2 = new Map<string, number>();
-      map2.set('top', Number(location.top) * height);
-      map2.set('left', Number(location.left) * width);
-      this.map = new Map<string, Map<string, number>>();
+      map2.set('top', parseFloat(location.top) * height / 100);
+      map2.set('left', parseFloat(location.left) * width / 100);
       this.map.set(location.name, map2);
     }
   }

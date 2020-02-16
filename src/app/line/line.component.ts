@@ -2,13 +2,14 @@ import {AfterViewInit, Component, Input, OnInit, ElementRef, Inject, AfterViewCh
 import { NgxSvgModule } from 'ngx-svg';
 import {LocationComponent} from '../location/location.component';
 import {DOCUMENT} from '@angular/common';
+import {PointCoordinatesService} from '../point-coordinates.service';
 
 @Component({
   selector: 'app-line',
   templateUrl: './line.component.html',
   styleUrls: ['./line.component.css']
 })
-export class LineComponent implements OnInit, AfterViewChecked {
+export class LineComponent implements OnInit, AfterViewChecked, AfterViewInit {
   @Input()
   topLine: number;
   @Input()
@@ -27,14 +28,23 @@ export class LineComponent implements OnInit, AfterViewChecked {
   left: string;
   @Input()
   transform: string;
+  @Input()
+  connectionFrom: string;
+  @Input()
+  connectionTo: string;
 
 
-  constructor(@Inject(DOCUMENT) private document: Document) {  }
+  constructor(@Inject(DOCUMENT) private document: Document, private pointCoordinatesService: PointCoordinatesService) {
+  }
 
   ngOnInit() {
-
+    console.log(this.connectionFrom + this.pointCoordinatesService.map.get(this.connectionFrom).get('top'));
+    const connectionFrom = this.pointCoordinatesService.map.get(this.connectionFrom);
+    const connectionTo = this.pointCoordinatesService.map.get(this.connectionTo);
+    this.createLine(connectionFrom, connectionTo);
   }
   ngAfterViewChecked() {
+
    // setTimeout(() => {
      // this.leftLineCity = this.getLeftPosition();
      // this.topLineCity = this.getTopPosition();
@@ -42,6 +52,10 @@ export class LineComponent implements OnInit, AfterViewChecked {
      // console.log(this);
    // });
   }
+  ngAfterViewInit(): void {
+
+  }
+
   getLeftPosition(): number {
     if (this.connection) {
       return this.document.getElementById(this.connection).offsetLeft;
@@ -54,11 +68,11 @@ export class LineComponent implements OnInit, AfterViewChecked {
       return this.document.getElementById(this.connection).offsetTop;
     }
   }
-  createLine() {
-    const x1: number = this.leftLine; // document.getElementById(point1Id).offsetLeft;
-    const y1: number = this.topLine; // document.getElementById(point1Id).offsetTop;
-    const x2: number = this.leftLineCity; // document.getElementById(point2Id).offsetLeft;
-    const y2: number = this.topLineCity; // document.getElementById(point2Id).offsetTop;
+  createLine(connectionFrom: Map<string, number>, connectionTo: Map<string, number>,) {
+    const x1: number = connectionFrom.get('left'); // this.leftLine; // document.getElementById(point1Id).offsetLeft;
+    const y1: number = connectionFrom.get('top'); // this.topLine; // document.getElementById(point1Id).offsetTop;
+    const x2: number = connectionTo.get('left'); // this.leftLineCity; // document.getElementById(point2Id).offsetLeft;
+    const y2: number = connectionTo.get('top'); // this.topLineCity; // document.getElementById(point2Id).offsetTop;
    //  console.log( 'leftline: ' + x1, 'leftlineCity: ' + x2, 'topline: ' + y1, 'toplineCity: ' + y2);
     /// the distance between the tow points(for the line div width)
     const distance: number = Math.sqrt( ((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2)));

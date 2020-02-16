@@ -3,5 +3,5 @@
   <app-location *ngFor="let location of locations" [left]="location.left" [top]="location.top"
                 [class]="colorConverter(location.color)"
                 [name]="location.name" [connections]="location.connections.toString()"></app-location>
-  <app-connection *ngFor="let location of locations" [connections]="location.connections.toString()" [connectionName]="location.name"></app-connection>
+  <app-line *ngFor="let connection of connections" [connectionFrom]="connection.from" [connectionTo]="connection.to"></app-line>
 </div>

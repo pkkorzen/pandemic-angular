@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import locations from '../assets/locations.json';
+import connections from '../assets/connections.json';
 import {log} from 'util';
 
 
@@ -11,6 +12,7 @@ import {log} from 'util';
 export class AppComponent {
   title = 'pandemic-angular';
   locations = locations;
+  connections = connections;
 
   locationOnClick() {
     alert('location clicked');
