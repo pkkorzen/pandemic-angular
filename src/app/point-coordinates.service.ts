@@ -8,9 +8,12 @@ export class PointCoordinatesService {
   map: Map<string, Map<string, number>>;
 
   constructor() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    // const width = window.innerWidth;
+    // const height = window.innerHeight;
     this.map = new Map<string, Map<string, number>>();
+  }
+
+  calculate(width: number, height: number) {
     for (const location of locations) {
       const map2 = new Map<string, number>();
       map2.set('top', parseFloat(location.top) * height / 100);

@@ -1,4 +1,4 @@
-<div class="container-fluid map2">
+<div class="container-fluid map2" id="map2">
   <img src="../assets/img/karta-mira-mir-planeta-zemlia-kontinenty-materiki-kletki-sin.jpg"/>
   <app-location *ngFor="let location of locations" [left]="location.left" [top]="location.top"
                 [class]="colorConverter(location.color)"

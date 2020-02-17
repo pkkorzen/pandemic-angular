@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input, OnInit, ElementRef, Inject, AfterViewChecked} from '@angular/core';
+import {AfterViewInit, Component, Input, OnInit, ElementRef, Inject, AfterViewChecked, OnChanges} from '@angular/core';
 import { NgxSvgModule } from 'ngx-svg';
 import {LocationComponent} from '../location/location.component';
 import {DOCUMENT} from '@angular/common';
@@ -38,11 +38,17 @@ export class LineComponent implements OnInit, AfterViewChecked, AfterViewInit {
   }
 
   ngOnInit() {
-    console.log(this.connectionFrom + this.pointCoordinatesService.map.get(this.connectionFrom).get('top'));
-    const connectionFrom = this.pointCoordinatesService.map.get(this.connectionFrom);
-    const connectionTo = this.pointCoordinatesService.map.get(this.connectionTo);
-    this.createLine(connectionFrom, connectionTo);
+    setTimeout(() => {
+      const height = document.getElementById('map2').offsetHeight;
+      const width = document.getElementById('map2').offsetWidth;
+      this.pointCoordinatesService.calculate(width, height);
+      console.log(this.connectionFrom + this.pointCoordinatesService.map.get(this.connectionFrom).get('top'));
+      const connectionFrom = this.pointCoordinatesService.map.get(this.connectionFrom);
+      const connectionTo = this.pointCoordinatesService.map.get(this.connectionTo);
+      this.createLine(connectionFrom, connectionTo);
+    });
   }
+
   ngAfterViewChecked() {
 
    // setTimeout(() => {
@@ -68,7 +74,7 @@ export class LineComponent implements OnInit, AfterViewChecked, AfterViewInit {
       return this.document.getElementById(this.connection).offsetTop;
     }
   }
-  createLine(connectionFrom: Map<string, number>, connectionTo: Map<string, number>,) {
+  createLine(connectionFrom: Map<string, number>, connectionTo: Map<string, number>) {
     const x1: number = connectionFrom.get('left'); // this.leftLine; // document.getElementById(point1Id).offsetLeft;
     const y1: number = connectionFrom.get('top'); // this.topLine; // document.getElementById(point1Id).offsetTop;
     const x2: number = connectionTo.get('left'); // this.leftLineCity; // document.getElementById(point2Id).offsetLeft;
@@ -91,5 +97,14 @@ export class LineComponent implements OnInit, AfterViewChecked, AfterViewInit {
     this.top = yMid + 'px';
     this.left = xMid - (distance / 2) + 'px';
     this.transform = 'rotate(' + salopeInDegrees + 'deg)';
+  }
+  onResize() {
+    const height = document.getElementById('map2').offsetHeight;
+    const width = document.getElementById('map2').offsetWidth;
+    this.pointCoordinatesService.calculate(width, height);
+    console.log(this.connectionFrom + this.pointCoordinatesService.map.get(this.connectionFrom).get('top'));
+    const connectionFrom = this.pointCoordinatesService.map.get(this.connectionFrom);
+    const connectionTo = this.pointCoordinatesService.map.get(this.connectionTo);
+    this.createLine(connectionFrom, connectionTo);
   }
 }

@@ -7,4 +7,4 @@ x1 = 215
 y2 = 230
 x2 = 250-->
 <!--<svg-line [x1]="leftLine" [y1]="topLine" [x0]="leftLineCity" [y0]="topLineCity" stroke="white"></svg-line>-->
-<div class="line" [id]="'line-'+ connectionFrom + ' ' + connectionTo" [style.top]="top" [style.width]="width" [style.left]="left" [style.transform]="transform"></div>
+<div class="line" (window:resize)="onResize()" [id]="'line-'+ connectionFrom + ' ' + connectionTo" [style.top]="top" [style.width]="width" [style.left]="left" [style.transform]="transform"></div>
