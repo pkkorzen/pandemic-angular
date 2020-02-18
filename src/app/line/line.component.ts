@@ -9,17 +9,7 @@ import {PointCoordinatesService} from '../point-coordinates.service';
   templateUrl: './line.component.html',
   styleUrls: ['./line.component.css']
 })
-export class LineComponent implements OnInit, AfterViewChecked, AfterViewInit {
-  @Input()
-  topLine: number;
-  @Input()
-  leftLine: number;
-  @Input()
-  topLineCity: number;
-  @Input()
-  leftLineCity: number;
-  @Input()
-  connection: string;
+export class LineComponent implements OnInit {
   @Input()
   width: string;
   @Input()
@@ -39,48 +29,35 @@ export class LineComponent implements OnInit, AfterViewChecked, AfterViewInit {
 
   ngOnInit() {
     setTimeout(() => {
-      const height = document.getElementById('map2').offsetHeight;
-      const width = document.getElementById('map2').offsetWidth;
-      this.pointCoordinatesService.calculate(width, height);
-      console.log(this.connectionFrom + this.pointCoordinatesService.map.get(this.connectionFrom).get('top'));
-      const connectionFrom = this.pointCoordinatesService.map.get(this.connectionFrom);
-      const connectionTo = this.pointCoordinatesService.map.get(this.connectionTo);
-      this.createLine(connectionFrom, connectionTo);
+      this.createLine();
     });
   }
 
-  ngAfterViewChecked() {
-
-   // setTimeout(() => {
-     // this.leftLineCity = this.getLeftPosition();
-     // this.topLineCity = this.getTopPosition();
-      // this.createLine();
-     // console.log(this);
-   // });
-  }
-  ngAfterViewInit(): void {
-
+  private createLine() {
+    const {height, width} = this.getMapSize();
+    this.pointCoordinatesService.calculateLocationsCoordinates(width, height);
+    const connectionFrom = this.getConnectionCoordinates(this.connectionFrom);
+    const connectionTo = this.getConnectionCoordinates(this.connectionTo);
+    this.drawLine(connectionFrom, connectionTo);
   }
 
-  getLeftPosition(): number {
-    if (this.connection) {
-      return this.document.getElementById(this.connection).offsetLeft;
-    }
-
+  private getConnectionCoordinates(connection: string) {
+    return this.pointCoordinatesService.map.get(connection);
   }
 
-  getTopPosition(): number {
-    if (this.connection) {
-      return this.document.getElementById(this.connection).offsetTop;
-    }
+  private getMapSize() {
+    const height = document.getElementById('map2').offsetHeight;
+    const width = document.getElementById('map2').offsetWidth;
+    return {height, width};
   }
-  createLine(connectionFrom: Map<string, number>, connectionTo: Map<string, number>) {
-    const x1: number = connectionFrom.get('left'); // this.leftLine; // document.getElementById(point1Id).offsetLeft;
-    const y1: number = connectionFrom.get('top'); // this.topLine; // document.getElementById(point1Id).offsetTop;
-    const x2: number = connectionTo.get('left'); // this.leftLineCity; // document.getElementById(point2Id).offsetLeft;
-    const y2: number = connectionTo.get('top'); // this.topLineCity; // document.getElementById(point2Id).offsetTop;
-   //  console.log( 'leftline: ' + x1, 'leftlineCity: ' + x2, 'topline: ' + y1, 'toplineCity: ' + y2);
-    /// the distance between the tow points(for the line div width)
+
+  private drawLine(connectionFrom: Map<string, number>, connectionTo: Map<string, number>) {
+    const x1: number = connectionFrom.get('left');
+    const y1: number = connectionFrom.get('top');
+    const x2: number = connectionTo.get('left');
+    const y2: number = connectionTo.get('top');
+
+    // the distance between the tow points(for the line div width)
     const distance: number = Math.sqrt( ((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2)));
 
     // the mid-point between the two points, we use it as rotation center
@@ -88,7 +65,6 @@ export class LineComponent implements OnInit, AfterViewChecked, AfterViewInit {
     const yMid: number = (y1 + y2) / 2;
 
     // get the salope of the line between two points
-
     const salopeInRadian: number = Math.atan2(y1 - y2, x1 - x2);
     const salopeInDegrees: number =  (salopeInRadian * 180) / Math.PI;
 
@@ -99,12 +75,6 @@ export class LineComponent implements OnInit, AfterViewChecked, AfterViewInit {
     this.transform = 'rotate(' + salopeInDegrees + 'deg)';
   }
   onResize() {
-    const height = document.getElementById('map2').offsetHeight;
-    const width = document.getElementById('map2').offsetWidth;
-    this.pointCoordinatesService.calculate(width, height);
-    console.log(this.connectionFrom + this.pointCoordinatesService.map.get(this.connectionFrom).get('top'));
-    const connectionFrom = this.pointCoordinatesService.map.get(this.connectionFrom);
-    const connectionTo = this.pointCoordinatesService.map.get(this.connectionTo);
-    this.createLine(connectionFrom, connectionTo);
+    this.createLine();
   }
 }
