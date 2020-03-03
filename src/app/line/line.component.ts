@@ -61,8 +61,8 @@ export class LineComponent implements OnInit {
     const distance: number = Math.sqrt( ((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2)));
 
     // the mid-point between the two points, we use it as rotation center
-    const xMid: number = (x1 + x2) / 2;
-    const yMid: number = (y1 + y2) / 2;
+    const xMid: number = (x1 + x2) / 2 + 10;
+    const yMid: number = (y1 + y2) / 2 + 10;
 
     // get the salope of the line between two points
     const salopeInRadian: number = Math.atan2(y1 - y2, x1 - x2);

@@ -5,12 +5,14 @@ import { NgxSvgModule } from 'ngx-svg';
 import { AppComponent } from './app.component';
 import { LocationComponent } from './location/location.component';
 import { LineComponent } from './line/line.component';
+import { PlayerComponent } from './player/player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LocationComponent,
     LineComponent,
+    PlayerComponent,
   ],
   imports: [
     BrowserModule,

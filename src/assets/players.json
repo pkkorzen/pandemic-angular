@@ -1,0 +1,18 @@
+[
+  {
+    "city": "Atlanta",
+    "color": "red"
+  },
+  {
+    "city": "Chicago",
+    "color": "blue"
+  },
+  {
+    "city": "Montreal",
+    "color": "yellow"
+  },
+  {
+    "city": "San Francisco",
+    "color": "green"
+  }
+]
