@@ -370,5 +370,17 @@
   {
     "from": "Manila",
     "to": "Sydney"
+  },
+  {
+    "from": "Tokyo",
+    "to": "San Francisco"
+  },
+  {
+    "from": "Manila",
+    "to": "San Francisco"
+  },
+  {
+    "from": "Sydney",
+    "to": "Los Angeles"
   }
 ]

@@ -38,7 +38,18 @@ export class LineComponent implements OnInit {
     this.pointCoordinatesService.calculateLocationsCoordinates(width, height);
     const connectionFrom = this.getConnectionCoordinates(this.connectionFrom);
     const connectionTo = this.getConnectionCoordinates(this.connectionTo);
-    this.drawLine(connectionFrom, connectionTo);
+    if (this.connectionFrom === 'San Francisco' && (this.connectionTo === 'Manila' || this.connectionTo === 'Tokyo')) {
+      this.drawLine2(connectionFrom, connectionTo);
+    } else if (this.connectionFrom === 'Los Angeles' && this.connectionTo === 'Sydney') {
+      this.drawLine2(connectionFrom, connectionTo);
+    } else if ((this.connectionFrom === 'Manila' || this.connectionFrom === 'Tokyo') && this.connectionTo === 'San Francisco') {
+      this.drawLine3(connectionFrom, connectionTo);
+    } else if (this.connectionFrom === 'Sydney' && this.connectionTo === 'Los Angeles') {
+      this.drawLine3(connectionFrom, connectionTo);
+    } else {
+      this.drawLine(connectionFrom, connectionTo);
+    }
+
   }
 
   private getConnectionCoordinates(connection: string) {
@@ -55,6 +66,53 @@ export class LineComponent implements OnInit {
     const x1: number = connectionFrom.get('left');
     const y1: number = connectionFrom.get('top');
     const x2: number = connectionTo.get('left');
+    const y2: number = connectionTo.get('top');
+
+    // the distance between the tow points(for the line div width)
+    const distance: number = Math.sqrt( ((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2)));
+
+    // the mid-point between the two points, we use it as rotation center
+    const xMid: number = (x1 + x2) / 2 + 10;
+    const yMid: number = (y1 + y2) / 2 + 10;
+
+    // get the salope of the line between two points
+    const salopeInRadian: number = Math.atan2(y1 - y2, x1 - x2);
+    const salopeInDegrees: number =  (salopeInRadian * 180) / Math.PI;
+
+    // change the css of the line
+    this.width = distance + 'px';
+    this.top = yMid + 'px';
+    this.left = xMid - (distance / 2) + 'px';
+    this.transform = 'rotate(' + salopeInDegrees + 'deg)';
+  }
+  private drawLine2(connectionFrom: Map<string, number>, connectionTo: Map<string, number>) {
+    const x1: number = connectionFrom.get('left');
+    const y1: number = connectionFrom.get('top');
+    const x2 = -10;
+    const y2: number = connectionTo.get('top');
+
+    // the distance between the tow points(for the line div width)
+    const distance: number = Math.sqrt( ((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2)));
+
+    // the mid-point between the two points, we use it as rotation center
+    const xMid: number = (x1 + x2) / 2 + 10;
+    const yMid: number = (y1 + y2) / 2 + 10;
+
+    // get the salope of the line between two points
+    const salopeInRadian: number = Math.atan2(y1 - y2, x1 - x2);
+    const salopeInDegrees: number =  (salopeInRadian * 180) / Math.PI;
+
+    // change the css of the line
+    this.width = distance + 'px';
+    this.top = yMid + 'px';
+    this.left = xMid - (distance / 2) + 'px';
+    this.transform = 'rotate(' + salopeInDegrees + 'deg)';
+  }
+  private drawLine3(connectionFrom: Map<string, number>, connectionTo: Map<string, number>) {
+    const {height, width} = this.getMapSize();
+    const x1: number = connectionFrom.get('left');
+    const y1: number = connectionFrom.get('top');
+    const x2 = width - 12;
     const y2: number = connectionTo.get('top');
 
     // the distance between the tow points(for the line div width)
