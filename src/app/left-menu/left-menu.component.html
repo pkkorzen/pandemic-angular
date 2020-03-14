@@ -1,0 +1,15 @@
+<div>
+  <button type="button" id="bottom" class="button btn btn-dark" (click)="toggleLeftMenu()">{{buttonText}}</button>
+</div>
+<div id="left-menu" class="left-menu" [hidden]="hide">
+  <table>
+    <tr>
+      <th [className]="'th-button btn ' + button1Class" (click)="toggleButton(1)">1</th>
+      <th [className]="'th-button btn ' + button2Class" (click)="toggleButton(2)">2</th>
+      <th [className]="'th-button btn ' + button3Class" (click)="toggleButton(3)">3</th>
+    </tr>
+    <tr>
+      <td colspan="3">{{insideMenuText}}</td>
+    </tr>
+  </table>
+</div>

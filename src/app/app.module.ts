@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LocationComponent } from './location/location.component';
 import { LineComponent } from './line/line.component';
 import { PlayerComponent } from './player/player.component';
+import { LeftMenuComponent } from './left-menu/left-menu.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { PlayerComponent } from './player/player.component';
     LocationComponent,
     LineComponent,
     PlayerComponent,
+    LeftMenuComponent,
   ],
   imports: [
     BrowserModule,
