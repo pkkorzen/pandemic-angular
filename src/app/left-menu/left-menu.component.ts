@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import players from '../../assets/players.json';
 
 @Component({
   selector: 'app-left-menu',
@@ -7,14 +8,21 @@ import {Component, OnInit} from '@angular/core';
 })
 export class LeftMenuComponent implements OnInit {
   hide: boolean;
+  hide1: boolean;
+  hide2: boolean;
+  hide3: boolean;
   buttonText: string;
   button1Class: string;
   button2Class: string;
   button3Class: string;
   insideMenuText: string;
+  players = players;
 
   constructor() {
     this.hide = true;
+    this.hide1 = true;
+    this.hide2 = false;
+    this.hide3 = true;
     this.buttonText = '>';
     this.button1Class = 'btn-secondary';
     this.button2Class = 'btn-dark';
@@ -43,19 +51,25 @@ export class LeftMenuComponent implements OnInit {
         this.button1Class = 'btn-dark';
         this.button2Class = 'btn-secondary';
         this.button3Class = 'btn-secondary';
-        this.insideMenuText = '1';
+        this.hide1 = false;
+        this.hide2 = true;
+        this.hide3 = true;
         break;
       case 2:
         this.button1Class = 'btn-secondary';
         this.button2Class = 'btn-dark';
         this.button3Class = 'btn-secondary';
-        this.insideMenuText = '2';
+        this.hide1 = true;
+        this.hide2 = false;
+        this.hide3 = true;
         break;
       case 3:
         this.button1Class = 'btn-secondary';
         this.button2Class = 'btn-secondary';
         this.button3Class = 'btn-dark';
-        this.insideMenuText = '3';
+        this.hide1 = true;
+        this.hide2 = true;
+        this.hide3 = false;
         break;
     }
   }

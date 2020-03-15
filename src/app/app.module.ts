@@ -7,6 +7,9 @@ import { LocationComponent } from './location/location.component';
 import { LineComponent } from './line/line.component';
 import { PlayerComponent } from './player/player.component';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
+import { LeftMenuPlayCardsComponent } from './left-menu-play-cards/left-menu-play-cards.component';
+import { LeftMenuInfectedCardsComponent } from './left-menu-infected-cards/left-menu-infected-cards.component';
+import { LeftMenuHistoryComponent } from './left-menu-history/left-menu-history.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,9 @@ import { LeftMenuComponent } from './left-menu/left-menu.component';
     LineComponent,
     PlayerComponent,
     LeftMenuComponent,
+    LeftMenuPlayCardsComponent,
+    LeftMenuInfectedCardsComponent,
+    LeftMenuHistoryComponent,
   ],
   imports: [
     BrowserModule,
