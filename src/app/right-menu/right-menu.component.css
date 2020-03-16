@@ -1,8 +1,8 @@
-.left-menu {
+.right-menu{
   background-color: black;
   filter: opacity(80%);
   top: 20%;
-  max-width: 15%;
+  left: 85%;
   width: 15%;
   height: 50%;
   position: absolute;
@@ -10,25 +10,9 @@
   z-index: 4;
   border-radius: .25rem;
 }
-
 .button {
   top: 50%;
+  left: 97.6%;
   position: absolute;
   z-index: 5;
-}
-table {
-  border-collapse: collapse;
-  position: absolute;
-  table-layout: fixed;
-}
-th, tr, td {
-  color: white;
-}
-table, tr, td, th {
-  border: none;
-}
-
-th, td {
-  width: 33.3%;
-
 }

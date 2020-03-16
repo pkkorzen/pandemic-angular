@@ -11,6 +11,8 @@ import { LeftMenuPlayCardsComponent } from './left-menu-play-cards/left-menu-pla
 import { LeftMenuInfectedCardsComponent } from './left-menu-infected-cards/left-menu-infected-cards.component';
 import { LeftMenuHistoryComponent } from './left-menu-history/left-menu-history.component';
 import { UpperMenuComponent } from './upper-menu/upper-menu.component';
+import { RightMenuComponent } from './right-menu/right-menu.component';
+import { RightMenuPlayersComponent } from './right-menu-players/right-menu-players.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { UpperMenuComponent } from './upper-menu/upper-menu.component';
     LeftMenuInfectedCardsComponent,
     LeftMenuHistoryComponent,
     UpperMenuComponent,
+    RightMenuComponent,
+    RightMenuPlayersComponent,
   ],
   imports: [
     BrowserModule,

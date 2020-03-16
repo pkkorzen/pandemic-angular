@@ -1,18 +1,26 @@
 [
   {
     "city": "Atlanta",
-    "color": "red"
+    "color": "red",
+    "name": "Przemek",
+    "role": "Medic"
   },
   {
     "city": "Chicago",
-    "color": "blue"
+    "color": "blue",
+    "name": "Aldonka",
+    "role": "Scientist"
   },
   {
     "city": "Montreal",
-    "color": "yellow"
+    "color": "yellow",
+    "name": "Natalia",
+    "role": "Quarantine Specialist"
   },
   {
     "city": "San Francisco",
-    "color": "green"
+    "color": "green",
+    "name": "Bartek",
+    "role": "Researcher"
   }
 ]
