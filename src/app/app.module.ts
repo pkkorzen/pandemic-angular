@@ -10,6 +10,7 @@ import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { LeftMenuPlayCardsComponent } from './left-menu-play-cards/left-menu-play-cards.component';
 import { LeftMenuInfectedCardsComponent } from './left-menu-infected-cards/left-menu-infected-cards.component';
 import { LeftMenuHistoryComponent } from './left-menu-history/left-menu-history.component';
+import { UpperMenuComponent } from './upper-menu/upper-menu.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { LeftMenuHistoryComponent } from './left-menu-history/left-menu-history.
     LeftMenuPlayCardsComponent,
     LeftMenuInfectedCardsComponent,
     LeftMenuHistoryComponent,
+    UpperMenuComponent,
   ],
   imports: [
     BrowserModule,
