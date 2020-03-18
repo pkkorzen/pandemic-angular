@@ -13,6 +13,7 @@ import { LeftMenuHistoryComponent } from './left-menu-history/left-menu-history.
 import { UpperMenuComponent } from './upper-menu/upper-menu.component';
 import { RightMenuComponent } from './right-menu/right-menu.component';
 import { RightMenuPlayersComponent } from './right-menu-players/right-menu-players.component';
+import { BottomMenuComponent } from './bottom-menu/bottom-menu.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { RightMenuPlayersComponent } from './right-menu-players/right-menu-playe
     UpperMenuComponent,
     RightMenuComponent,
     RightMenuPlayersComponent,
+    BottomMenuComponent,
   ],
   imports: [
     BrowserModule,

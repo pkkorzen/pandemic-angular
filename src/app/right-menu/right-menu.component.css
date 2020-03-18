@@ -1,8 +1,8 @@
 .right-menu{
-  background-color: black;
-  filter: opacity(80%);
+  background-color: rgba(0, 0, 0, 0.8);
   top: 20%;
   left: 85%;
+  max-width: 15%;
   width: 15%;
   height: 50%;
   position: absolute;
