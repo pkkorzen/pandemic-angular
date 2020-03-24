@@ -11,3 +11,22 @@
   position: absolute;
   z-index: 2;
 }
+
+.below {
+  display: block;
+  position: absolute;
+  color: white;
+  text-align: left;
+  max-width: 80px;
+  font-size: 13px;
+  text-shadow:
+    -1px -1px 0 #000,
+    0   -1px 0 #000,
+    1px -1px 0 #000,
+    1px  0   0 #000,
+    1px  1px 0 #000,
+    0    1px 0 #000,
+    -1px  1px 0 #000,
+    -1px  0   0 #000;
+  z-index: 3;
+}

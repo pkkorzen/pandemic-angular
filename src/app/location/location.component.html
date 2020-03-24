@@ -1,2 +1,3 @@
 <div [id]="name" [className]="'btn ' + class + ' btn-circle btn-sm location'" [style.top]="top" [style.left]="left">
 </div>
+<div class="below" (window:resize)="onResize()" [style.top]="locationNameTop" [style.left]="locationNameLeft">{{name}}</div>
