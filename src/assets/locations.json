@@ -5,7 +5,8 @@
     "color" : "blue",
     "top" : "36%",
     "left" : "22%",
-    "connections": ["Los Angeles", "Atlanta", "Montreal", "Mexico City"]
+    "connections": ["Los Angeles", "Atlanta", "Montreal", "Mexico City"],
+    "cubes" : "0"
   },
   {
     "id" : "2",
@@ -13,7 +14,8 @@
     "color" : "blue",
     "top" : "37%",
     "left" : "16.75%",
-    "connections": ["Los Angeles", "Chicago"]
+    "connections": ["Los Angeles", "Chicago"],
+    "cubes" : "0"
   },
   {
     "id" : "3",
@@ -21,7 +23,8 @@
     "color" : "blue",
     "top" : "34.5%",
     "left" : "27.5%",
-    "connections": ["Washington", "New York"]
+    "connections": ["Washington", "New York"],
+    "cubes" : "2"
   },
   {
     "id" : "4",
@@ -29,7 +32,8 @@
     "color" : "blue",
     "top" : "35%",
     "left" : "33%",
-    "connections": ["Washington", "London", "Madrid"]
+    "connections": ["Washington", "London", "Madrid"],
+    "cubes" : "0"
   },
   {
     "id" : "5",
@@ -37,7 +41,8 @@
     "color" : "blue",
     "top" : "40%",
     "left" : "25%",
-    "connections": ["Washington", "Miami"]
+    "connections": ["Washington", "Miami"],
+    "cubes" : "0"
   },
   {
     "id" : "6",
@@ -45,7 +50,8 @@
     "color" : "blue",
     "top" : "40%",
     "left" : "30%",
-    "connections": ["Miami"]
+    "connections": ["Miami"],
+    "cubes" : "0"
   },
   {
     "id" : "7",
@@ -53,7 +59,8 @@
     "color" : "blue",
     "top" : "39%",
     "left" : "42%",
-    "connections": ["Sao Paulo", "Paris", "Algiers"]
+    "connections": ["Sao Paulo", "Paris", "Algiers"],
+    "cubes" : "0"
   },
   {
     "id" : "8",
@@ -61,7 +68,8 @@
     "color" : "blue",
     "top" : "30%",
     "left" : "43%",
-    "connections": ["Essen", "Madrid", "Paris"]
+    "connections": ["Essen", "Madrid", "Paris"],
+    "cubes" : "0"
   },
   {
     "id" : "9",
@@ -69,7 +77,8 @@
     "color" : "blue",
     "top" : "35%",
     "left" : "46%",
-    "connections": ["Essen", "Milan", "Algiers"]
+    "connections": ["Essen", "Milan", "Algiers"],
+    "cubes" : "0"
   },
   {
     "id" : "10",
@@ -77,7 +86,8 @@
     "color" : "blue",
     "top" : "35%",
     "left" : "50%",
-    "connections": ["Istanbul"]
+    "connections": ["Istanbul"],
+    "cubes" : "0"
   },
   {
     "id" : "11",
@@ -85,7 +95,8 @@
     "color" : "blue",
     "top" : "29%",
     "left" : "48%",
-    "connections": ["St. Petersburg", "Milan"]
+    "connections": ["St. Petersburg", "Milan"],
+    "cubes" : "0"
   },
   {
     "id" : "12",
@@ -93,7 +104,8 @@
     "color" : "blue",
     "top" : "28.5%",
     "left" : "53%",
-    "connections": ["Moscow", "Istanbul"]
+    "connections": ["Moscow", "Istanbul"],
+    "cubes" : "0"
   },
   {
     "id" : "13",
@@ -101,7 +113,8 @@
     "color" : "black",
     "top" : "31%",
     "left" : "57%",
-    "connections": ["Tehran"]
+    "connections": ["Tehran"],
+    "cubes" : "0"
   },
   {
     "id" : "14",
@@ -109,7 +122,8 @@
     "color" : "black",
     "top" : "38%",
     "left" : "53.5%",
-    "connections": ["Moscow", "Baghdad"]
+    "connections": ["Moscow", "Baghdad"],
+    "cubes" : "0"
   },
   {
     "id" : "15",
@@ -117,7 +131,8 @@
     "color" : "black",
     "top" : "44%",
     "left" : "47.5%",
-    "connections": ["Istanbul", "Cairo"]
+    "connections": ["Istanbul", "Cairo"],
+    "cubes" : "0"
   },
   {
     "id" : "16",
@@ -125,7 +140,8 @@
     "color" : "black",
     "top" : "46%",
     "left" : "53%",
-    "connections": ["Istanbul", "Baghdad", "Riyadh"]
+    "connections": ["Istanbul", "Baghdad", "Riyadh"],
+    "cubes" : "0"
   },
   {
     "id" : "17",
@@ -133,7 +149,8 @@
     "color" : "black",
     "top" : "42%",
     "left" : "57.5%",
-    "connections": ["Karachi", "Riyadh"]
+    "connections": ["Karachi", "Riyadh"],
+    "cubes" : "1"
   },
   {
     "id" : "18",
@@ -141,7 +158,8 @@
     "color" : "black",
     "top" : "35%",
     "left" : "61%",
-    "connections": ["Delhi", "Karachi", "Baghdad"]
+    "connections": ["Delhi", "Karachi", "Baghdad"],
+    "cubes" : "0"
   },
   {
     "id" : "19",
@@ -149,7 +167,8 @@
     "color" : "black",
     "top" : "50%",
     "left" : "58.5%",
-    "connections": ["Karachi"]
+    "connections": ["Karachi"],
+    "cubes" : "0"
   },
   {
     "id" : "20",
@@ -157,7 +176,8 @@
     "color" : "black",
     "top" : "44%",
     "left" : "62%",
-    "connections": ["Delhi"]
+    "connections": ["Delhi"],
+    "cubes" : "0"
   },
   {
     "id" : "21",
@@ -165,7 +185,8 @@
     "color" : "black",
     "top" : "39%",
     "left" : "65.5%",
-    "connections": ["Kolkata", "Chennai"]
+    "connections": ["Kolkata", "Chennai"],
+    "cubes" : "0"
   },
   {
     "id" : "22",
@@ -173,7 +194,8 @@
     "color" : "black",
     "top" : "53.5%",
     "left" : "63.5%",
-    "connections": ["Delhi", "Chennai", "Karachi"]
+    "connections": ["Delhi", "Chennai", "Karachi"],
+    "cubes" : "0"
   },
   {
     "id" : "23",
@@ -181,7 +203,8 @@
     "color" : "black",
     "top" : "57%",
     "left" : "67%",
-    "connections": ["Kolkata", "Bangkok", "Jakarta"]
+    "connections": ["Kolkata", "Bangkok", "Jakarta"],
+    "cubes" : "0"
   },
   {
     "id" : "24",
@@ -189,7 +212,8 @@
     "color" : "black",
     "top" : "42%",
     "left" : "69%",
-    "connections": ["Hong Kong", "Bangkok"]
+    "connections": ["Hong Kong", "Bangkok"],
+    "cubes" : "0"
   },
   {
     "id" : "25",
@@ -197,7 +221,8 @@
     "color" : "red",
     "top" : "52%",
     "left" : "71%",
-    "connections": ["Hong Kong", "Ho Chi Minh City", "Jakarta"]
+    "connections": ["Hong Kong", "Ho Chi Minh City", "Jakarta"],
+    "cubes" : "0"
   },
   {
     "id" : "26",
@@ -205,7 +230,8 @@
     "color" : "red",
     "top" : "48%",
     "left" : "73.5%",
-    "connections": ["Shanghai", "Taipei", "Manila"]
+    "connections": ["Shanghai", "Taipei", "Manila"],
+    "cubes" : "0"
   },
   {
     "id" : "27",
@@ -213,7 +239,8 @@
     "color" : "red",
     "top" : "63%",
     "left" : "70.7%",
-    "connections": ["Ho Chi Minh City", "Sydney"]
+    "connections": ["Ho Chi Minh City", "Sydney"],
+    "cubes" : "0"
   },
   {
     "id" : "28",
@@ -221,7 +248,8 @@
     "color" : "red",
     "top" : "58%",
     "left" : "74.5%",
-    "connections": ["Hong Kong", "Manila"]
+    "connections": ["Hong Kong", "Manila"],
+    "cubes" : "0"
   },
   {
     "id" : "29",
@@ -229,7 +257,8 @@
     "color" : "red",
     "top" : "56%",
     "left" : "79%",
-    "connections": ["Sydney"]
+    "connections": ["Sydney"],
+    "cubes" : "2"
   },
   {
     "id" : "30",
@@ -237,7 +266,8 @@
     "color" : "red",
     "top" : "74%",
     "left" : "83%",
-    "connections": []
+    "connections": [],
+    "cubes" : "0"
   },
   {
     "id" : "31",
@@ -245,7 +275,8 @@
     "color" : "red",
     "top" : "39%",
     "left" : "75.5%",
-    "connections": ["Beijing", "Seoul", "Tokyo", "Taipei"]
+    "connections": ["Beijing", "Seoul", "Tokyo", "Taipei"],
+    "cubes" : "0"
   },
   {
     "id" : "32",
@@ -253,7 +284,8 @@
     "color" : "red",
     "top" : "32%",
     "left" : "73%",
-    "connections": ["Seoul"]
+    "connections": ["Seoul"],
+    "cubes" : "0"
   },
   {
     "id" : "33",
@@ -261,7 +293,8 @@
     "color" : "red",
     "top" : "31%",
     "left" : "79.5%",
-    "connections": ["Tokyo"]
+    "connections": ["Tokyo"],
+    "cubes" : "0"
   },
   {
     "id" : "34",
@@ -269,7 +302,8 @@
     "color" : "red",
     "top" : "48%",
     "left" : "79%",
-    "connections": ["Manila"]
+    "connections": ["Manila"],
+    "cubes" : "0"
 
   },
   {
@@ -278,7 +312,8 @@
     "color" : "red",
     "top" : "42%",
     "left" : "82%",
-    "connections": ["Taipei"]
+    "connections": ["Taipei"],
+    "cubes" : "0"
   },
   {
     "id" : "36",
@@ -286,7 +321,8 @@
     "color" : "red",
     "top" : "37%",
     "left" : "83%",
-    "connections": ["Osaka"]
+    "connections": ["Osaka"],
+    "cubes" : "0"
   },
   {
     "id" : "37",
@@ -294,7 +330,8 @@
     "color" : "yellow",
     "top" : "42%",
     "left" : "19%",
-    "connections": ["Mexico City"]
+    "connections": ["Mexico City"],
+    "cubes" : "0"
   },
   {
     "id" : "38",
@@ -302,7 +339,8 @@
     "color" : "yellow",
     "top" : "48%",
     "left" : "22%",
-    "connections": ["Miami", "Lima", "Bogota"]
+    "connections": ["Miami", "Lima", "Bogota"],
+    "cubes" : "0"
   },
   {
     "id" : "39",
@@ -310,7 +348,8 @@
     "color" : "yellow",
     "top" : "47.75%",
     "left" : "27.5%",
-    "connections": ["Bogota"]
+    "connections": ["Bogota"],
+    "cubes" : "0"
   },
   {
     "id" : "40",
@@ -318,7 +357,8 @@
     "color" : "yellow",
     "top" : "57%",
     "left" : "27.5%",
-    "connections": ["Lima", "Buenos Aires", "Sao Paulo"]
+    "connections": ["Lima", "Buenos Aires", "Sao Paulo"],
+    "cubes" : "0"
   },
   {
     "id" : "41",
@@ -326,7 +366,8 @@
     "color" : "yellow",
     "top" : "65%",
     "left" : "26%",
-    "connections": ["Santiago"]
+    "connections": ["Santiago"],
+    "cubes" : "0"
   },
   {
     "id" : "42",
@@ -334,7 +375,8 @@
     "color" : "yellow",
     "top" : "77%",
     "left" : "26.5%",
-    "connections": []
+    "connections": [],
+    "cubes" : "0"
   },
   {
     "id" : "43",
@@ -342,7 +384,8 @@
     "color" : "yellow",
     "top" : "75%",
     "left" : "33%",
-    "connections": ["Sao Paulo"]
+    "connections": ["Sao Paulo"],
+    "cubes" : "0"
   },
   {
     "id" : "44",
@@ -350,7 +393,8 @@
     "color" : "yellow",
     "top" : "68%",
     "left" : "36%",
-    "connections": ["Lagos"]
+    "connections": ["Lagos"],
+    "cubes" : "0"
   },
   {
     "id" : "45",
@@ -358,7 +402,8 @@
     "color" : "yellow",
     "top" : "55%",
     "left" : "47%",
-    "connections": ["Khartoum", "Kinshasa"]
+    "connections": ["Khartoum", "Kinshasa"],
+    "cubes" : "0"
   },
   {
     "id" : "46",
@@ -366,7 +411,8 @@
     "color" : "yellow",
     "top" : "55%",
     "left" : "53%",
-    "connections": ["Cairo", "Kinshasa", "Johannesburg"]
+    "connections": ["Cairo", "Kinshasa", "Johannesburg"],
+    "cubes" : "0"
   },
   {
     "id" : "47",
@@ -374,7 +420,8 @@
     "color" : "yellow",
     "top" : "63%",
     "left" : "50.5%",
-    "connections": ["Johannesburg"]
+    "connections": ["Johannesburg"],
+    "cubes" : "0"
   },
   {
     "id" : "48",
@@ -382,6 +429,7 @@
     "color" : "yellow",
     "top" : "71%",
     "left" : "53%",
-    "connections": []
+    "connections": [],
+    "cubes" : "3"
   }
 ]

@@ -1,0 +1,10 @@
+<div class="one-cube" *ngIf="cubes === '1'" [style.top]=top [style.left]="left" [ngStyle]="{'background-color': color}"></div>
+<div *ngIf="cubes === '2'">
+<div class="two-cube"  [style.top]=top [style.left]="left" [ngStyle]="{'background-color': color}"></div>
+<div class="two-cubeb" [style.top]=top [style.left]="left" [ngStyle]="{'background-color': color}"></div>
+</div>
+<div *ngIf="cubes === '3'">
+<div class="three-cube" [style.top]=top [style.left]="left" [ngStyle]="{'background-color': color}"></div>
+<div class="three-cubeb" [style.top]=top [style.left]="left" [ngStyle]="{'background-color': color}"></div>
+<div class="three-cubec" [style.top]=top [style.left]="left" [ngStyle]="{'background-color': color}"></div>
+</div>

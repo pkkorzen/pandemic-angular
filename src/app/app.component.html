@@ -9,4 +9,6 @@
   <app-upper-menu></app-upper-menu>
   <app-right-menu></app-right-menu>
   <app-bottom-menu></app-bottom-menu>
+  <app-infection-cubes *ngFor="let location of locations" [left]="location.left" [top]="location.top" [cubes]="location.cubes"
+                        [name]="location.name" [color]="location.color"></app-infection-cubes>
 </div>
