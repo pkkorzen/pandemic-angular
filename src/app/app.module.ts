@@ -15,6 +15,7 @@ import { RightMenuComponent } from './right-menu/right-menu.component';
 import { RightMenuPlayersComponent } from './right-menu-players/right-menu-players.component';
 import { BottomMenuComponent } from './bottom-menu/bottom-menu.component';
 import { InfectionCubesComponent } from './infection-cubes/infection-cubes.component';
+import { StartingPageComponent } from './starting-page/starting-page.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { InfectionCubesComponent } from './infection-cubes/infection-cubes.compo
     RightMenuPlayersComponent,
     BottomMenuComponent,
     InfectionCubesComponent,
+    StartingPageComponent,
   ],
   imports: [
     BrowserModule,
