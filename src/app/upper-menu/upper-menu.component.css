@@ -10,6 +10,7 @@
   z-index: 4;
   border-radius: .25rem;
   color: white;
+  text-align: center;
 }
 .top-menu2{
   background-color: black;
@@ -30,5 +31,11 @@
   padding: 3px 0px;
   border-radius: 25px;
   font-size: 8px;
+  text-align: center;
+}
+
+.inline {
+  display: inline-block;
+  vertical-align: top;
   text-align: center;
 }
