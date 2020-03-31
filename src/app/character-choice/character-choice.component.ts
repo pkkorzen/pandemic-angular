@@ -20,6 +20,7 @@ export class CharacterChoiceComponent implements OnInit {
   player2Image: string;
   player3Image: string;
   player4Image: string;
+  playerNumber: number;
 
   constructor(@Inject(DOCUMENT) document) {
     this.hide = true;
@@ -32,6 +33,7 @@ export class CharacterChoiceComponent implements OnInit {
     this.player2Image = '../../assets/img/character-choice.png';
     this.player3Image = '../../assets/img/character-choice.png';
     this.player4Image = '../../assets/img/character-choice.png';
+    this.playerNumber = 2;
     this.map = new Map<string, number>();
     for (const character of characters) {
       this.map.set(character.name, 0);

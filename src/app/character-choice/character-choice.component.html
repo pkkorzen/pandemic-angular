@@ -4,7 +4,7 @@
 <div class="background">
   <div class="form-group flex-row">
     <label class="label" for="playerNumber">Number of players: &nbsp;</label>
-    <select class="form-control btn btn-dark select" id="playerNumber">
+    <select [(ngModel)]="playerNumber" class="form-control btn btn-dark select" id="playerNumber">
       <option>2</option>
       <option>3</option>
       <option>4</option>
@@ -28,8 +28,8 @@
         </select>
       </div>
     </div>
-    <div class="inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-    <div class="inline"><img [src]="player3Image" height="120" width="120">
+    <div [hidden]="playerNumber < 3" class="inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div [hidden]="playerNumber < 3"  class="inline"><img [src]="player3Image" height="120" width="120">
       <div class="text-bottom">Natalia</div>
       <div class="form-group">
         <select (change)="selectEvent($event, this.player3)" id="player3" class="form-control btn btn-dark select">
@@ -37,8 +37,8 @@
         </select>
       </div>
     </div>
-    <div class="inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-    <div class="inline"><img [src]="player4Image" height="120" width="120">
+    <div [hidden]="playerNumber < 4" class="inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div [hidden]="playerNumber < 4" class="inline"><img [src]="player4Image" height="120" width="120">
       <div class="text-bottom">Bartek</div>
       <div class="form-group">
         <select (change)="selectEvent($event, this.player4)" id="player4" class="form-control btn btn-dark select">
@@ -55,5 +55,5 @@
       <option>6</option>
     </select>
   </div>
-  <button type="button" class="btn btn-dark">Start game</button>
+  <a routerLink="/game" class="btn btn-dark">Start game</a>
 </div>

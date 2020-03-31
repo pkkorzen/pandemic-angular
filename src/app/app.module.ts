@@ -18,6 +18,19 @@ import { InfectionCubesComponent } from './infection-cubes/infection-cubes.compo
 import { StartingPageComponent } from './starting-page/starting-page.component';
 import { CharacterChoiceComponent } from './character-choice/character-choice.component';
 import {FormsModule} from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+import { GameComponent } from './game/game.component';
+
+const appRoutes: Routes = [
+  {
+    path: 'game',
+    component: GameComponent,
+  },
+  {
+    path: '',
+    component: CharacterChoiceComponent,
+  },
+];
 
 @NgModule({
   declarations: [
@@ -36,11 +49,16 @@ import {FormsModule} from '@angular/forms';
     InfectionCubesComponent,
     StartingPageComponent,
     CharacterChoiceComponent,
+    GameComponent,
   ],
   imports: [
     BrowserModule,
     NgxSvgModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    ),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+<div class="container-fluid map2" id="map2">
+  <img class="img" src="../../assets/img/karta-mira-mir-planeta-zemlia-kontinenty-materiki-kletki-sin.jpg"/>
+  <app-location *ngFor="let location of locations" [left]="location.left" [top]="location.top"
+                [class]="colorConverter(location.color)"
+                [name]="location.name" [connections]="location.connections.toString()"></app-location>
+  <app-line *ngFor="let connection of connections" [connectionFrom]="connection.from" [connectionTo]="connection.to"></app-line>
+  <app-player *ngFor="let player of players" [city]="player.city" [color]="player.color"></app-player>
+  <app-left-menu></app-left-menu>
+  <app-upper-menu></app-upper-menu>
+  <app-right-menu></app-right-menu>
+  <app-bottom-menu></app-bottom-menu>
+  <app-infection-cubes *ngFor="let location of locations" [left]="location.left" [top]="location.top" [cubes]="location.cubes"
+                       [name]="location.name" [color]="location.color"></app-infection-cubes>
+</div>
