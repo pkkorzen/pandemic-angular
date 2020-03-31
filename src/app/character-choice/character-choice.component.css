@@ -45,4 +45,8 @@
   text-align: center;
 }
 
-
+.text-bottom {
+  display: block;
+  color: white;
+  text-align: center;
+}

@@ -17,6 +17,7 @@ import { BottomMenuComponent } from './bottom-menu/bottom-menu.component';
 import { InfectionCubesComponent } from './infection-cubes/infection-cubes.component';
 import { StartingPageComponent } from './starting-page/starting-page.component';
 import { CharacterChoiceComponent } from './character-choice/character-choice.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CharacterChoiceComponent } from './character-choice/character-choice.co
   ],
   imports: [
     BrowserModule,
-    NgxSvgModule
+    NgxSvgModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
