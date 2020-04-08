@@ -60,11 +60,11 @@ export class CharacterChoiceComponent implements OnInit {
     }
   }
 
-  handleChangeEvent(e) {
+  handleInputEvent(e) {
     this.value = e.target.value;
   }
 
-  selectEvent(e, character: string) {
+  handleChangeEvent(e, character: string) {
     this.map.set(character, 0);
     this.map.set(e.target.value, 1);
     const playerId = e.target.id;

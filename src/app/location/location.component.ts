@@ -40,8 +40,8 @@ export class LocationComponent implements OnInit {
   }
 
   private getMapSize() {
-    const height = document.getElementById('map2').offsetHeight;
-    const width = document.getElementById('map2').offsetWidth;
+    const height = document.getElementById('background-map').offsetHeight;
+    const width = document.getElementById('background-map').offsetWidth;
     return {height, width};
   }
 

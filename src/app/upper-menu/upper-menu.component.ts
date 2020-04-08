@@ -7,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpperMenuComponent implements OnInit {
   hide: boolean;
+
   constructor() {
     this.hide = true;
   }
+
   ngOnInit() {
   }
-  toggleUpperMenu(){
+
+  toggleUpperMenu() {
     this.hide = !this.hide;
   }
 }

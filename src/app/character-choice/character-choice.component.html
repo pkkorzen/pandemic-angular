@@ -1,4 +1,4 @@
-<div class="container-fluid map2" id="map2">
+<div class="container-fluid background-map" id="background-map">
   <img class="img" src="../../assets/img/karta-mira-mir-planeta-zemlia-kontinenty-materiki-kletki-sin.jpg"/>
 </div>
 <div class="background">
@@ -14,16 +14,16 @@
     <div class="inline"><img [src]="player1Image" height="120" width="120">
       <div class="text-bottom">Przemek</div>
       <div class="form-group">
-        <select (change)="selectEvent($event, this.player1)" id="player1" class="form-control btn btn-dark select">
+        <select (change)="handleChangeEvent($event, this.player1)" id="player1" class="form-control btn btn-dark select">
           <option [defaultSelected]="character.name === player1" [disabled]="map.get(character.name) === 1 && character.name != 'Random'" *ngFor="let character of characters" [value]="character.name">{{character.name}}</option>
         </select>
       </div>
     </div>
     <div class="inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
     <div class="inline"><img [src]="player2Image" height="120" width="120">
-      <div (click)="enable()"><input type="text" (input)="handleChangeEvent($event)" (focusout)="setTrue()" (keydown)="onKeydown($event)" id="input2" [value]="value" class="form-control-plaintext text-bottom" [disabled]="hide"></div>
+      <div (click)="enable()"><input type="text" (input)="handleInputEvent($event)" (focusout)="setTrue()" (keydown)="onKeydown($event)" id="input2" [value]="value" class="form-control-plaintext text-bottom" [disabled]="hide"></div>
       <div class="form-group">
-        <select (change)="selectEvent($event, this.player2)" id="player2" class="form-control btn btn-dark select">
+        <select (change)="handleChangeEvent($event, this.player2)" id="player2" class="form-control btn btn-dark select">
           <option [defaultSelected]="character.name === player2" [disabled]="map.get(character.name) === 1 && character.name != 'Random'" *ngFor="let character of characters" [value]="character.name">{{character.name}}</option>
         </select>
       </div>
@@ -32,7 +32,7 @@
     <div [hidden]="playerNumber < 3"  class="inline"><img [src]="player3Image" height="120" width="120">
       <div class="text-bottom">Natalia</div>
       <div class="form-group">
-        <select (change)="selectEvent($event, this.player3)" id="player3" class="form-control btn btn-dark select">
+        <select (change)="handleChangeEvent($event, this.player3)" id="player3" class="form-control btn btn-dark select">
           <option [defaultSelected]="character.name === player3" [disabled]="map.get(character.name) === 1 && character.name != 'Random'" *ngFor="let character of characters" [value]="character.name">{{character.name}}</option>
         </select>
       </div>
@@ -41,7 +41,7 @@
     <div [hidden]="playerNumber < 4" class="inline"><img [src]="player4Image" height="120" width="120">
       <div class="text-bottom">Bartek</div>
       <div class="form-group">
-        <select (change)="selectEvent($event, this.player4)" id="player4" class="form-control btn btn-dark select">
+        <select (change)="handleChangeEvent($event, this.player4)" id="player4" class="form-control btn btn-dark select">
           <option [defaultSelected]="character.name === player4" [disabled]="map.get(character.name) === 1 && character.name != 'Random'" *ngFor="let character of characters" [value]="character.name">{{character.name}}</option>
         </select>
       </div>

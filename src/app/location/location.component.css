@@ -6,13 +6,14 @@
   font-size: 8px;
   text-align: center;
 }
+
 .location {
   display: block;
   position: absolute;
   z-index: 2;
 }
 
-.below {
+.location-name-below {
   display: block;
   position: absolute;
   color: white;

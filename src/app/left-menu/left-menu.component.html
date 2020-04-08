@@ -9,8 +9,14 @@
       <th [className]="'th-button btn ' + button3Class" (click)="toggleButton(3)">3</th>
     </tr>
     <tr>
-      <td colspan="3" [hidden]="hide1"><app-left-menu-play-cards *ngFor="let player of players" [city]="player.city" [color]="player.color"></app-left-menu-play-cards></td>
-      <td colspan="3" [hidden]="hide2"><app-left-menu-infected-cards *ngFor="let player of players" [city]="player.city" [color]="player.color"></app-left-menu-infected-cards></td>
+      <td colspan="3" [hidden]="hide1">
+        <app-left-menu-play-cards *ngFor="let player of players" [city]="player.city" [color]="player.color">
+        </app-left-menu-play-cards>
+      </td>
+      <td colspan="3" [hidden]="hide2">
+        <app-left-menu-infected-cards *ngFor="let player of players" [city]="player.city" [color]="player.color">
+        </app-left-menu-infected-cards>
+      </td>
       <td colspan="3" [hidden]="hide3"><app-left-menu-history></app-left-menu-history></td>
     </tr>
   </table>

@@ -1,6 +1,4 @@
-import {AfterViewInit, Component, Input, OnInit, ElementRef, Inject, AfterViewChecked, OnChanges} from '@angular/core';
-import { NgxSvgModule } from 'ngx-svg';
-import {LocationComponent} from '../location/location.component';
+import {Component, Input, OnInit, Inject} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
 import {PointCoordinatesService} from '../point-coordinates.service';
 
@@ -47,8 +45,8 @@ export class LineComponent implements OnInit {
   }
 
   private getMapSize() {
-    const height = document.getElementById('map2').offsetHeight;
-    const width = document.getElementById('map2').offsetWidth;
+    const height = document.getElementById('background-map').offsetHeight;
+    const width = document.getElementById('background-map').offsetWidth;
     return {height, width};
   }
 

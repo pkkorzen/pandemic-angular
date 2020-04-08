@@ -1,10 +1,11 @@
-.right-menu-players{
+.right-menu-players {
   background-color: black;
   z-index: 4;
   border-radius: .25rem;
   color: white;
   border-bottom: 3px solid grey;
 }
+
 .right-menu-name {
   color: black;
 }

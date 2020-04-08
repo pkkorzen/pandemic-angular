@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bottom-menu.component.css']
 })
 export class BottomMenuComponent implements OnInit {
+
   color: string;
+
   constructor() {
     this.color = 'yellow';
   }

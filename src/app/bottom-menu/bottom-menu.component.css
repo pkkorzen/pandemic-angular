@@ -1,4 +1,4 @@
-.bottom-menu{
+.bottom-menu {
   background-color: black;
   filter: opacity(80%);
   width: 100%;
@@ -9,11 +9,13 @@
   z-index: 4;
   text-align: center;
 }
+
 .inline {
   display: inline-block;
   vertical-align: top;
   text-align: center;
 }
+
 .text-bottom {
   display: block;
   color: white;

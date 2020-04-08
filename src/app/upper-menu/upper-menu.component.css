@@ -1,4 +1,4 @@
-.top-menu{
+.top-menu {
   background-color: black;
   filter: opacity(80%);
   top: 0%;
@@ -12,7 +12,8 @@
   color: white;
   text-align: center;
 }
-.top-menu2{
+
+.top-menu2 {
   background-color: black;
   filter: opacity(80%);
   top: 5%;

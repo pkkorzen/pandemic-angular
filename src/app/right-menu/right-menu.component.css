@@ -1,4 +1,4 @@
-.right-menu{
+.right-menu {
   background-color: rgba(0, 0, 0, 0.8);
   top: 20%;
   left: 85%;
@@ -10,6 +10,7 @@
   z-index: 4;
   border-radius: .25rem;
 }
+
 .button {
   top: 50%;
   left: 97.6%;
