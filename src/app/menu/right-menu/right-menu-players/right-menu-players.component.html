@@ -1,5 +1,5 @@
 <div class="right-menu-players">
   <div class="right-menu-name" [ngStyle]="{'background-color': color}">{{name}}</div>
   <div class="right-menu-name" [ngStyle]="{'background-color': color}">{{role}}</div>
-<div [className]="'btn ' + colorConverter(color)"></div>&nbsp;{{city}}<br>
+<div [className]="'btn ' + colorConverterService.convertColor(color)"></div>&nbsp;{{city}}<br>
 </div>

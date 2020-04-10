@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {ColorConverterService} from '../../../color-converter.service';
 
 @Component({
   selector: 'app-left-menu-play-cards',
@@ -10,25 +11,8 @@ export class LeftMenuPlayCardsComponent implements OnInit {
   private city: string;
   @Input()
   private color: string;
-  constructor() { }
+  constructor(private colorConverterService: ColorConverterService) { }
 
   ngOnInit() {
-  }
-
-  colorConverter(color: string): string {
-    switch (color) {
-      case 'blue': {
-        return 'btn-primary';
-      }
-      case 'black': {
-        return 'btn-dark';
-      }
-      case 'yellow': {
-        return 'btn-warning';
-      }
-      default: {
-        return 'btn-danger';
-      }
-    }
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import locations from '../../assets/locations.json';
 import connections from '../../assets/connections.json';
 import players from '../../assets/players.json';
+import {ColorConverterService} from '../color-converter.service';
 
 @Component({
   selector: 'app-game',
@@ -13,24 +14,7 @@ export class GameComponent implements OnInit {
   connections = connections;
   players = players;
 
-  constructor() { }
-
-  colorConverter(color: string): string {
-    switch (color) {
-      case 'blue': {
-        return 'btn-primary';
-      }
-      case 'black': {
-        return 'btn-dark';
-      }
-      case 'yellow': {
-        return 'btn-warning';
-      }
-      default: {
-        return 'btn-danger';
-      }
-    }
-  }
+  constructor(private colorConverterService: ColorConverterService) { }
 
   ngOnInit() {
   }

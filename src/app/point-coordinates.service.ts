@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import connections from '../assets/connections.json';
 import locations from '../assets/locations.json';
 @Injectable({
   providedIn: 'root'
