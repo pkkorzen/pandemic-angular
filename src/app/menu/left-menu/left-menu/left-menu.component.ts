@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import players from '../../assets/players.json';
+import players from '../../../../assets/players.json';
 
 @Component({
   selector: 'app-left-menu',
