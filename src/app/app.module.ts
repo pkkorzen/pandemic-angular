@@ -5,7 +5,7 @@ import { NgxSvgModule } from 'ngx-svg';
 import { AppComponent } from './app.component';
 import { LocationComponent } from './location/location.component';
 import { LineComponent } from './line/line.component';
-import { PlayerComponent } from './player/player.component';
+import { PawnComponent } from './pawn/pawn.component';
 import { LeftMenuComponent } from './menu/left-menu/left-menu/left-menu.component';
 import { LeftMenuPlayCardsComponent } from './menu/left-menu/left-menu-play-cards/left-menu-play-cards.component';
 import { LeftMenuInfectedCardsComponent } from './menu/left-menu/left-menu-infected-cards/left-menu-infected-cards.component';
@@ -37,7 +37,7 @@ const appRoutes: Routes = [
     AppComponent,
     LocationComponent,
     LineComponent,
-    PlayerComponent,
+    PawnComponent,
     LeftMenuComponent,
     LeftMenuPlayCardsComponent,
     LeftMenuInfectedCardsComponent,

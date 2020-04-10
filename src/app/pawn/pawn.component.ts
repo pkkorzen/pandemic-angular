@@ -3,11 +3,11 @@ import {DOCUMENT} from '@angular/common';
 import {PointCoordinatesService} from '../point-coordinates.service';
 
 @Component({
-  selector: 'app-player',
-  templateUrl: './player.component.html',
-  styleUrls: ['./player.component.css']
+  selector: 'app-pawn',
+  templateUrl: './pawn.component.html',
+  styleUrls: ['./pawn.component.css']
 })
-export class PlayerComponent implements OnInit {
+export class PawnComponent implements OnInit {
   @Input()
   private city: string;
   @Input()
