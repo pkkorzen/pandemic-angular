@@ -13,7 +13,7 @@ import { LeftMenuHistoryComponent } from './menu/left-menu/left-menu-history/lef
 import { UpperMenuComponent } from './menu/upper-menu/upper-menu.component';
 import { RightMenuComponent } from './menu/right-menu/right-menu/right-menu.component';
 import { RightMenuPlayersComponent } from './menu/right-menu/right-menu-players/right-menu-players.component';
-import { BottomMenuComponent } from './menu/bottom-menu/bottom-menu.component';
+import { BottomMenuComponent } from './menu/bottom-menu/bottom-menu/bottom-menu.component';
 import { InfectionCubesComponent } from './infection-cubes/infection-cubes.component';
 import { StartingPageComponent } from './starting-page/starting-page.component';
 import { CharacterChoiceComponent } from './character-choice/character-choice.component';
@@ -22,6 +22,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { GameComponent } from './game/game.component';
 import { PlayerComponent } from './player/player.component';
 import { TimesPipe } from './times.pipe';
+import { ActionComponent } from './menu/bottom-menu/action/action.component';
 
 const appRoutes: Routes = [
   {
@@ -54,6 +55,7 @@ const appRoutes: Routes = [
     GameComponent,
     PlayerComponent,
     TimesPipe,
+    ActionComponent,
   ],
   imports: [
     BrowserModule,

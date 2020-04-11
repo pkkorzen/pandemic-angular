@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import actions from '../../../../assets/actions.json';
 
 @Component({
   selector: 'app-bottom-menu',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class BottomMenuComponent implements OnInit {
 
   color: string;
+  actions = actions;
 
   constructor() {
     this.color = 'yellow';
