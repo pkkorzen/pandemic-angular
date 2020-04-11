@@ -1,0 +1,17 @@
+.text-bottom {
+  display: block;
+  color: white;
+  text-align: center;
+}
+
+.inline {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.select {
+  -webkit-appearance: none;
+  text-align-last: center;
+  width: inherit;
+}

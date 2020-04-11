@@ -20,6 +20,8 @@ import { CharacterChoiceComponent } from './character-choice/character-choice.co
 import {FormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { GameComponent } from './game/game.component';
+import { PlayerComponent } from './player/player.component';
+import { TimesPipe } from './times.pipe';
 
 const appRoutes: Routes = [
   {
@@ -50,6 +52,8 @@ const appRoutes: Routes = [
     StartingPageComponent,
     CharacterChoiceComponent,
     GameComponent,
+    PlayerComponent,
+    TimesPipe,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<div class="inline"><img [src]="playerImage" height="120" width="120">
+  <input type="text" (input)="handleInputEvent($event)" (focusin)="clearName()" (keydown)="onKeydown($event)"
+         [id]="playerId" [value]="name" class="form-control-plaintext text-bottom">
+  <div class="form-group">
+    <select (change)="handleChangeEvent($event, this.playerCharacter)" class="form-control btn btn-dark select">
+      <option [defaultSelected]="character.name === this.playerCharacter"
+              [disabled]="charactersMap.get(character.name) === 1 && character.name != 'Random'"
+              *ngFor="let character of characters" [value]="character.name">{{character.name}}
+      </option>
+    </select>
+  </div>
+</div>
+<div class="inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
