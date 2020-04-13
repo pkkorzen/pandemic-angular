@@ -23,6 +23,7 @@ import { GameComponent } from './game/game.component';
 import { PlayerComponent } from './player/player.component';
 import { TimesPipe } from './times.pipe';
 import { ActionComponent } from './menu/bottom-menu/action/action.component';
+import { CubesComponent } from './cubes/cubes.component';
 
 const appRoutes: Routes = [
   {
@@ -56,6 +57,7 @@ const appRoutes: Routes = [
     PlayerComponent,
     TimesPipe,
     ActionComponent,
+    CubesComponent,
   ],
   imports: [
     BrowserModule,

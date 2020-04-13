@@ -1,0 +1,32 @@
+{
+  "one": {
+    "first": {
+      "from": "{ transform: rotate(0deg) translateX(20px) rotate(0deg); }",
+      "to": "{ transform: rotate(360deg) translateX(20px) rotate(-360deg); }"
+    }
+  },
+  "two": {
+    "first": {
+      "from": "{ transform: rotate(80deg) translateX(20px) rotate(-80deg); }",
+      "to": "{ transform: rotate(440deg) translateX(20px) rotate(-440deg); }"
+    },
+    "second": {
+      "from": "{ transform: rotate(260deg) translateX(20px) rotate(-260deg); }",
+      "to": "{ transform: rotate(620deg) translateX(20px) rotate(-620deg); }"
+    }
+  },
+  "three": {
+    "first": {
+      "from": "{ transform: rotate(90deg) translateX(20px) rotate(-90deg); }",
+      "to": "{ transform: rotate(450deg) translateX(20px) rotate(-450deg); }"
+    },
+    "second": {
+      "from": "{ transform: rotate(210deg) translateX(20px) rotate(-210deg); }",
+      "to": "{ transform: rotate(570deg) translateX(20px) rotate(-570deg); }"
+    },
+    "third": {
+      "from": "{ transform: rotate(330deg) translateX(20px) rotate(-330deg); }",
+      "to": "{ transform: rotate(690deg) translateX(20px) rotate(-690deg); }"
+    }
+  }
+}
