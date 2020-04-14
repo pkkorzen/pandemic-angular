@@ -14,7 +14,7 @@ import { UpperMenuComponent } from './menu/upper-menu/upper-menu.component';
 import { RightMenuComponent } from './menu/right-menu/right-menu/right-menu.component';
 import { RightMenuPlayersComponent } from './menu/right-menu/right-menu-players/right-menu-players.component';
 import { BottomMenuComponent } from './menu/bottom-menu/bottom-menu/bottom-menu.component';
-import { InfectionCubesComponent } from './infection-cubes/infection-cubes.component';
+import { InfectionCubesComponent } from './cubes/infection-cubes/infection-cubes.component';
 import { StartingPageComponent } from './starting-page/starting-page.component';
 import { CharacterChoiceComponent } from './character-choice/character-choice.component';
 import {FormsModule} from '@angular/forms';
@@ -23,7 +23,7 @@ import { GameComponent } from './game/game.component';
 import { PlayerComponent } from './player/player.component';
 import { TimesPipe } from './times.pipe';
 import { ActionComponent } from './menu/bottom-menu/action/action.component';
-import { CubesComponent } from './cubes/cubes.component';
+import { CubeComponent } from './cubes/cube/cube.component';
 
 const appRoutes: Routes = [
   {
@@ -57,7 +57,7 @@ const appRoutes: Routes = [
     PlayerComponent,
     TimesPipe,
     ActionComponent,
-    CubesComponent,
+    CubeComponent,
   ],
   imports: [
     BrowserModule,

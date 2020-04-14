@@ -1,191 +1,162 @@
+.cube {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 2;
+}
+
 .one-cube {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  -webkit-animation: myOrbit1 4s linear infinite; /* Chrome, Safari 5 */
-  -moz-animation: myOrbit1 4s linear infinite; /* Firefox 5-15 */
-  -o-animation: myOrbit1 4s linear infinite; /* Opera 12+ */
-  animation: myOrbit1 4s linear infinite;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  z-index: 2;
+  -webkit-animation: cubesAnimation 8s linear infinite; /* Chrome, Safari 5 */
+  -moz-animation: cubesAnimation 8s linear infinite; /* Firefox 5-15 */
+  -o-animation: cubesAnimation 8s linear infinite; /* Opera 12+ */
+  animation: cubesAnimation 8s linear infinite;
 }
 
-.two-cube {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  -webkit-animation: myOrbit2 4s linear infinite; /* Chrome, Safari 5 */
-  -moz-animation: myOrbit2 4s linear infinite; /* Firefox 5-15 */
-  -o-animation: myOrbit2 4s linear infinite; /* Opera 12+ */
-  animation: myOrbit2 4s linear infinite;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  z-index: 2;
+.two-cubes-first {
+  -webkit-animation: cubesAnimation-2-1 8s linear infinite; /* Chrome, Safari 5 */
+  -moz-animation: cubesAnimation-2-1 8s linear infinite; /* Firefox 5-15 */
+  -o-animation: cubesAnimation-2-1 8s linear infinite; /* Opera 12+ */
+  animation: cubesAnimation-2-1 8s linear infinite;
 }
 
-.two-cubeb {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  -webkit-animation: myOrbit2b 4s linear infinite; /* Chrome, Safari 5 */
-  -moz-animation: myOrbit2b 4s linear infinite; /* Firefox 5-15 */
-  -o-animation: myOrbit2b 4s linear infinite; /* Opera 12+ */
-  animation: myOrbit2b 4s linear infinite;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  z-index: 2;
+.two-cubes-second {
+  -webkit-animation: cubesAnimation-2-2 8s linear infinite; /* Chrome, Safari 5 */
+  -moz-animation: cubesAnimation-2-2 8s linear infinite; /* Firefox 5-15 */
+  -o-animation: cubesAnimation-2-2 8s linear infinite; /* Opera 12+ */
+  animation: cubesAnimation-2-2 8s linear infinite;
 }
 
-.three-cube {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  -webkit-animation: myOrbit3 4s linear infinite; /* Chrome, Safari 5 */
-  -moz-animation: myOrbit3 4s linear infinite; /* Firefox 5-15 */
-  -o-animation: myOrbit3 4s linear infinite; /* Opera 12+ */
-  animation: myOrbit3 4s linear infinite;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  z-index: 2;
+.three-cubes-first {
+  -webkit-animation: cubesAnimation-3-1 8s linear infinite; /* Chrome, Safari 5 */
+  -moz-animation: cubesAnimation-3-1 8s linear infinite; /* Firefox 5-15 */
+  -o-animation: cubesAnimation-3-1 8s linear infinite; /* Opera 12+ */
+  animation: cubesAnimation-3-1 8s linear infinite;
 }
 
-.three-cubeb {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  -webkit-animation: myOrbit3b 4s linear infinite; /* Chrome, Safari 5 */
-  -moz-animation: myOrbit3b 4s linear infinite; /* Firefox 5-15 */
-  -o-animation: myOrbit3b 4s linear infinite; /* Opera 12+ */
-  animation: myOrbit3b 4s linear infinite;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  z-index: 2;
+.three-cubes-second {
+  -webkit-animation: cubesAnimation-3-2 8s linear infinite; /* Chrome, Safari 5 */
+  -moz-animation: cubesAnimation-3-2 8s linear infinite; /* Firefox 5-15 */
+  -o-animation: cubesAnimation-3-2 8s linear infinite; /* Opera 12+ */
+  animation: cubesAnimation-3-2 8s linear infinite;
 }
 
-.three-cubec {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  -webkit-animation: myOrbit3c 4s linear infinite; /* Chrome, Safari 5 */
-  -moz-animation: myOrbit3c 4s linear infinite; /* Firefox 5-15 */
-  -o-animation: myOrbit3c 4s linear infinite; /* Opera 12+ */
-  animation: myOrbit3c 4s linear infinite;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  z-index: 2;
+.three-cubes-third {
+  -webkit-animation: cubesAnimation-3-3 8s linear infinite; /* Chrome, Safari 5 */
+  -moz-animation: cubesAnimation-3-3 8s linear infinite; /* Firefox 5-15 */
+  -o-animation: cubesAnimation-3-3 8s linear infinite; /* Opera 12+ */
+  animation: cubesAnimation-3-3 8s linear infinite;
 }
-
-@-webkit-keyframes myOrbit1 {
+@-webkit-keyframes cubesAnimation {
   from { -webkit-transform: rotate(0deg) translateX(20px) rotate(0deg); }
   to   { -webkit-transform: rotate(360deg) translateX(20px) rotate(-360deg); }
 }
 
-@-moz-keyframes myOrbit1 {
+@-moz-keyframes cubesAnimation {
   from { -moz-transform: rotate(0deg) translateX(20px) rotate(0deg); }
   to   { -moz-transform: rotate(360deg) translateX(20px) rotate(-360deg); }
 }
 
-@-o-keyframes myOrbit1 {
+@-o-keyframes cubesAnimation {
   from { -o-transform: rotate(0deg) translateX(20px) rotate(0deg); }
   to   { -o-transform: rotate(360deg) translateX(20px) rotate(-360deg); }
 }
-@keyframes myOrbit1 {
+
+@keyframes cubesAnimation {
   from { transform: rotate(0deg) translateX(20px) rotate(0deg); }
   to   { transform: rotate(360deg) translateX(20px) rotate(-360deg); }
 }
 
-@-webkit-keyframes myOrbit2 {
-   from { -webkit-transform: rotate(80deg) translateX(20px) rotate(-80deg); }
-   to   { -webkit-transform: rotate(440deg) translateX(20px) rotate(-440deg); }
- }
+@-webkit-keyframes cubesAnimation-2-1 {
+  from { -webkit-transform: rotate(80deg) translateX(20px) rotate(-80deg); }
+  to   { -webkit-transform: rotate(440deg) translateX(20px) rotate(-440deg); }
+}
 
-@-moz-keyframes myOrbit2 {
+@-moz-keyframes cubesAnimation-2-1 {
   from { -moz-transform: rotate(80deg) translateX(20px) rotate(-80deg); }
   to   { -moz-transform: rotate(440deg) translateX(20px) rotate(-440deg); }
 }
 
-@-o-keyframes myOrbit2 {
+@-o-keyframes cubesAnimation-2-1 {
   from { -o-transform: rotate(80deg) translateX(20px) rotate(-80deg); }
   to   { -o-transform: rotate(440deg) translateX(20px) rotate(-440deg); }
 }
-@keyframes myOrbit2 {
+@keyframes cubesAnimation-2-1{
   from { transform: rotate(80deg) translateX(20px) rotate(-80deg); }
   to   { transform: rotate(440deg) translateX(20px) rotate(-440deg); }
 }
 
-@-webkit-keyframes myOrbit2b {
+@-webkit-keyframes cubesAnimation-2-2 {
   from { -webkit-transform: rotate(260deg) translateX(20px) rotate(-260deg); }
   to   { -webkit-transform: rotate(620deg) translateX(20px) rotate(-620deg); }
 }
 
-@-moz-keyframes myOrbit2b {
+@-moz-keyframes cubesAnimation-2-2 {
   from { -moz-transform: rotate(260deg) translateX(20px) rotate(-260deg); }
   to   { -moz-transform: rotate(620deg) translateX(20px) rotate(-620deg); }
 }
 
-@-o-keyframes myOrbit2b {
+@-o-keyframes cubesAnimation-2-2 {
   from { -o-transform: rotate(260deg) translateX(20px) rotate(-260deg); }
   to   { -o-transform: rotate(620deg) translateX(20px) rotate(-620deg); }
 }
-@keyframes myOrbit2b {
+@keyframes cubesAnimation-2-2 {
   from { transform: rotate(260deg) translateX(20px) rotate(-260deg); }
   to   { transform: rotate(620deg) translateX(20px) rotate(-620deg); }
 }
 
-@-webkit-keyframes myOrbit3 {
+@-webkit-keyframes cubesAnimation-3-1 {
   from { -webkit-transform: rotate(90deg) translateX(20px) rotate(-90deg); }
   to   { -webkit-transform: rotate(450deg) translateX(20px) rotate(-450deg); }
 }
 
-@-moz-keyframes myOrbit3 {
+@-moz-keyframes cubesAnimation-3-1 {
   from { -moz-transform: rotate(90deg) translateX(20px) rotate(-90deg); }
   to   { -moz-transform: rotate(450deg) translateX(20px) rotate(-450deg); }
 }
 
-@-o-keyframes myOrbit3 {
+@-o-keyframes cubesAnimation-3-1 {
   from { -o-transform: rotate(90deg) translateX(20px) rotate(-90deg); }
   to   { -o-transform: rotate(450deg) translateX(20px) rotate(-450deg); }
 }
-@keyframes myOrbit3 {
+@keyframes cubesAnimation-3-1 {
   from { transform: rotate(90deg) translateX(20px) rotate(-90deg); }
   to   { transform: rotate(450deg) translateX(20px) rotate(-450deg); }
 }
 
-@-webkit-keyframes myOrbit3b {
+@-webkit-keyframes cubesAnimation-3-2 {
   from { -webkit-transform: rotate(210deg) translateX(20px) rotate(-210deg); }
   to   { -webkit-transform: rotate(570deg) translateX(20px) rotate(-570deg); }
 }
 
-@-moz-keyframes myOrbit3b {
+@-moz-keyframes cubesAnimation-3-2 {
   from { -moz-transform: rotate(210deg) translateX(20px) rotate(-210deg); }
   to   { -moz-transform: rotate(570deg) translateX(20px) rotate(-570deg); }
 }
 
-@-o-keyframes myOrbit3b {
+@-o-keyframes cubesAnimation-3-2 {
   from { -o-transform: rotate(210deg) translateX(20px) rotate(-210deg); }
   to   { -o-transform: rotate(570deg) translateX(20px) rotate(-570deg); }
 }
-@keyframes myOrbit3b {
+@keyframes cubesAnimation-3-2 {
   from { transform: rotate(210deg) translateX(20px) rotate(-210deg); }
   to   { transform: rotate(570deg) translateX(20px) rotate(-570deg); }
 }
 
-@-webkit-keyframes myOrbit3c {
+@-webkit-keyframes cubesAnimation-3-3 {
   from { -webkit-transform: rotate(330deg) translateX(20px) rotate(-330deg); }
   to   { -webkit-transform: rotate(690deg) translateX(20px) rotate(-690deg); }
 }
 
-@-moz-keyframes myOrbit3c {
+@-moz-keyframes cubesAnimation-3-3 {
   from { -moz-transform: rotate(330deg) translateX(20px) rotate(-330deg); }
   to   { -moz-transform: rotate(690deg) translateX(20px) rotate(-690deg); }
 }
 
-@-o-keyframes myOrbit3c {
+@-o-keyframes cubesAnimation-3-3 {
   from { -o-transform: rotate(330deg) translateX(20px) rotate(-330deg); }
   to   { -o-transform: rotate(690deg) translateX(20px) rotate(-690deg); }
 }
-@keyframes myOrbit3c {
+@keyframes cubesAnimation-3-3 {
   from { transform: rotate(330deg) translateX(20px) rotate(-330deg); }
   to   { transform: rotate(690deg) translateX(20px) rotate(-690deg); }
 }
