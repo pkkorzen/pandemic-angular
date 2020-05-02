@@ -43,4 +43,28 @@ export class CubeComponent implements OnInit {
       }
     }
   }
+
+  cubesAnimationConverter2(cubesNumber: string, cubeOrdinal: number): string {
+    const animationString = cubesNumber + '-' + cubeOrdinal;
+    switch (animationString) {
+      case '1-0': {
+        return 'cubesAnimation';
+      }
+      case '2-0': {
+        return 'cubesAnimation-2-1';
+      }
+      case '2-1': {
+        return 'cubesAnimation-2-2';
+      }
+      case '3-0': {
+        return 'cubesAnimation-3-1';
+      }
+      case '3-1': {
+        return 'cubesAnimation-3-2';
+      }
+      default: {
+        return 'cubesAnimation-3-3';
+      }
+    }
+  }
 }
