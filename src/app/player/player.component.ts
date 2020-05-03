@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import characters from '../../assets/characters.json';
+import {Player} from '../player';
+import {Character} from '../character';
 
 @Component({
   selector: 'app-player',
@@ -8,15 +10,9 @@ import characters from '../../assets/characters.json';
 })
 export class PlayerComponent implements OnInit {
   @Input()
-  name: string;
+  player: Player;
   @Input()
-  playerCharacter: string;
-  @Input()
-  playerImage: string;
-  @Input()
-  playerId: string;
-  @Input()
-  charactersMap: Map<string, number>;
+  charactersMap: Map<string, Character>;
   characters = characters;
 
   constructor() {
@@ -25,24 +21,33 @@ export class PlayerComponent implements OnInit {
   ngOnInit() {
   }
 
-  handleChangeEvent(e, character: string) {
-    this.charactersMap.set(character, 0);
-    this.charactersMap.set(e.target.value, 1);
-    this.playerImage = '../../assets/img/characters/' + e.target.value.toLowerCase() + '.png';
-    this.playerCharacter = e.target.value;
+  handleChangeEvent(e) {
+    this.player.character.isAvailable = true;
+    const characterChosen = this.charactersMap.get(e.target.value);
+    if (characterChosen.name !== 'Random') {
+      characterChosen.isAvailable = false;
+    }
+    this.player.character = characterChosen;
   }
 
   private clearName() {
-    this.name = '';
+    this.player.name = '';
+  }
+
+  private checkName() {
+    if (this.player.name.trim() === '') {
+      this.player.name = 'Click & type your name...';
+    }
   }
 
   onKeydown(event) {
     if (event.key === 'Enter') {
-      document.getElementById(this.playerId).blur();
+      this.checkName()
+      document.getElementById(this.player.id).blur();
     }
   }
 
   handleInputEvent(e) {
-    this.name = e.target.value;
+    this.player.name = e.target.value;
   }
 }

@@ -9,13 +9,12 @@
     </select>
   </div>
   <div class="label">
-    <app-player *ngFor="let player of playerNumber|times let x = index" [name]="players[x].name"
-                [playerCharacter]="players[x].playerCharacter" [playerImage]="players[x].playerImage"
-                [playerId]="players[x].playerId" [charactersMap]="charactersMap"></app-player>
+    <app-player *ngFor="let player of playerNumber|times let x = index" [player]="players[x]"
+                [charactersMap]="charactersMap"></app-player>
   </div><br>
   <div class="form-group flex-row">
     <label class="label" for="pandemicNumber">Number of pandemic cards: &nbsp;</label>
-    <select [(ngModel)]="pandemicNumber"class="form-control btn btn-dark select" id="pandemicNumber">
+    <select [(ngModel)]="pandemicNumber" class="form-control btn btn-dark select" id="pandemicNumber">
       <option [defaultSelected] = "number === pandemicNumber" *ngFor="let number of maxPandemicCards">{{number}}</option>
     </select>
   </div>
