@@ -42,7 +42,7 @@ export class PlayerComponent implements OnInit {
 
   onKeydown(event) {
     if (event.key === 'Enter') {
-      this.checkName()
+      this.checkName();
       document.getElementById(this.player.id).blur();
     }
   }
