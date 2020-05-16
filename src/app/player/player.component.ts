@@ -22,12 +22,12 @@ export class PlayerComponent implements OnInit {
   }
 
   handleChangeEvent(e) {
-    this.player.character.isAvailable = true;
+    this.charactersMap.get(this.player.character).isAvailable = true;
     const characterChosen = this.charactersMap.get(e.target.value);
     if (characterChosen.name !== 'Random') {
       characterChosen.isAvailable = false;
     }
-    this.player.character = characterChosen;
+    this.player.character = characterChosen.name;
   }
 
   private clearName() {

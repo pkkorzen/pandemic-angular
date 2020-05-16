@@ -32,7 +32,7 @@ export class CharacterChoiceComponent implements OnInit {
     for (let i = 0; i < this.characterChoiceDTO.players.length; i++) {
       this.characterChoiceDTO.players[i] = new Player();
       this.characterChoiceDTO.players[i].name = 'Click & type your name...';
-      this.characterChoiceDTO.players[i].character = this.charactersMap.get('Random');
+      this.characterChoiceDTO.players[i].character = 'Random';
       this.characterChoiceDTO.players[i].id = 'player' + (i + 1);
     }
   }
