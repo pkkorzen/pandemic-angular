@@ -65,14 +65,14 @@ export class PawnComponent implements OnInit {
         return 'brightness(60%) sepia(80) saturate(100) hue-rotate(126deg)';
       }
       case 'light green': {
-        return 'brightness(82%) sepia(100) saturate(30) hue-rotate(75deg)';
+        return 'brightness(74%) sepia(100) saturate(30) hue-rotate(75deg)';
       }
       case 'dark green': {
-        return 'brightness(82%) sepia(100) saturate(76) hue-rotate(75deg)';
+        return 'brightness(74%) sepia(100) saturate(76) hue-rotate(75deg)';
       }
       case 'sea blue': {
         return 'brightness(75%) sepia(80) saturate(3) hue-rotate(167deg)';
-        //brightness(82%) sepia(0) saturate(48) hue-rotate(125deg)
+        //brightness(152%) sepia(10) saturate(48) hue-rotate(125deg) - this one looks closer to original
       }
     }
   }

@@ -13,7 +13,7 @@
   },
   {
     "name": "Quarantine Specialist",
-    "color":  "light green"
+    "color":  "dark green"
   },
   {
     "name": "Contingency Planner",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Operations Expert",
-    "color":  "dark green"
+    "color":  "light green"
   },
   {
     "name": "Random",

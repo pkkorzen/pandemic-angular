@@ -1,11 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import characters from '../../assets/characters.json';
 import {Player} from '../player';
-import {Character} from '../character';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CharacterChoiceDTO} from '../character-choice-dto';
 import {CharacterChoiceService} from '../services/character-choice.service';
-import {CharacterService} from '../services/character.service';
 
 @Component({
   selector: 'app-character-choice',
@@ -17,8 +14,7 @@ export class CharacterChoiceComponent implements OnInit {
   maxPlayers: number[];
   characterChoiceDTO: CharacterChoiceDTO;
 
-  constructor(private route: ActivatedRoute, private router: Router, private characterChoiceService: CharacterChoiceService,
-              private characterService: CharacterService) {
+  constructor(private route: ActivatedRoute, private router: Router, private characterChoiceService: CharacterChoiceService) {
     this.characterChoiceDTO = new CharacterChoiceDTO();
     this.characterChoiceDTO.playerNumber = 2;
     this.characterChoiceDTO.pandemicNumber = 5;
