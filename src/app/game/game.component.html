@@ -4,7 +4,7 @@
                 [class]="colorConverterService.convertColor(location.color)"
                 [name]="location.name" [connections]="location.connections.toString()"></app-location>
   <app-line *ngFor="let connection of connections" [connectionFrom]="connection.from" [connectionTo]="connection.to"></app-line>
-  <app-pawn *ngFor="let player of players" [city]="player.city" [color]="player.color"></app-pawn>
+  <app-pawn *ngFor="let player of players" [city]="player.city" [color]="charactersMap.get(player.character).color"></app-pawn>
   <app-left-menu></app-left-menu>
   <app-upper-menu></app-upper-menu>
   <app-right-menu></app-right-menu>

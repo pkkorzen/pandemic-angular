@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import locations from '../../assets/locations.json';
 import connections from '../../assets/connections.json';
-import players from '../../assets/players.json';
 import {ColorConverterService} from '../color-converter.service';
+import {CharacterService} from '../services/character.service';
+import {Character} from '../character';
+import {Player} from '../player';
+import {PlayerService} from '../services/player.service';
 
 @Component({
   selector: 'app-game',
@@ -12,11 +15,18 @@ import {ColorConverterService} from '../color-converter.service';
 export class GameComponent implements OnInit {
   locations = locations;
   connections = connections;
-  players = players;
+  players: Player[];
+  charactersMap: Map<string, Character>;
 
-  constructor(private colorConverterService: ColorConverterService) { }
+  constructor(private colorConverterService: ColorConverterService, private characterService: CharacterService,
+              private playerService: PlayerService) {
+    this.charactersMap = this.characterService.getCharactersMap();
+  }
 
   ngOnInit() {
+    this.playerService.findAll().subscribe(data => {
+      this.players = data;
+    });
   }
 
 }

@@ -5,18 +5,18 @@
   <form (ngSubmit)="onSubmit()" #userForm="ngForm">
   <div class="form-group flex-row">
     <label class="label" for="playerNumber">Number of players: &nbsp;</label>
-    <select [(ngModel)]="characterChoiceDTO.playerNumber" class="form-control btn btn-dark select" id="playerNumber">
+    <select [(ngModel)]="characterChoiceDTO.playerNumber" class="form-control btn btn-dark select" id="playerNumber" name="playerNumber">
       <option [defaultSelected] = "number === characterChoiceDTO.playerNumber"
               *ngFor="let number of maxPlayers">{{number}}</option>
     </select>
   </div>
   <div class="label">
-    <app-player [(ngModel)]="characterChoiceDTO.players" *ngFor="let player of characterChoiceDTO.playerNumber|times
+    <app-player *ngFor="let player of characterChoiceDTO.playerNumber|times
     let x = index" [player]="characterChoiceDTO.players[x]"></app-player>
   </div><br>
   <div class="form-group flex-row">
     <label class="label" for="pandemicNumber">Number of pandemic cards: &nbsp;</label>
-    <select [(ngModel)]="characterChoiceDTO.pandemicNumber" class="form-control btn btn-dark select" id="pandemicNumber">
+    <select [(ngModel)]="characterChoiceDTO.pandemicNumber" class="form-control btn btn-dark select" id="pandemicNumber" name="pandemicNumber">
       <option [defaultSelected] = "number === characterChoiceDTO.pandemicNumber"
               *ngFor="let number of maxPandemicCards">{{number}}</option>
     </select>

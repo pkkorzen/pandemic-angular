@@ -24,6 +24,7 @@ import { PlayerComponent } from './player/player.component';
 import { TimesPipe } from './times.pipe';
 import { ActionComponent } from './menu/bottom-menu/action/action.component';
 import { CubeComponent } from './cubes/cube/cube.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   {
@@ -60,6 +61,7 @@ const appRoutes: Routes = [
     CubeComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     NgxSvgModule,
     FormsModule,
