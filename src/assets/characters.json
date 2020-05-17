@@ -1,26 +1,34 @@
 [
   {
-    "name": "Medic"
+    "name": "Medic",
+    "color":  "orange"
   },
   {
-    "name": "Scientist"
+    "name": "Scientist",
+    "color":  "white"
   },
   {
-    "name": "Researcher"
+    "name": "Researcher",
+    "color":  "brown"
   },
   {
-    "name": "Quarantine Specialist"
+    "name": "Quarantine Specialist",
+    "color":  "light green"
   },
   {
-    "name": "Contingency Planner"
+    "name": "Contingency Planner",
+    "color":  "light blue"
   },
   {
-    "name": "Dispatcher"
+    "name": "Dispatcher",
+    "color":  "pink"
   },
   {
-    "name": "Operations Expert"
+    "name": "Operations Expert",
+    "color":  "dark green"
   },
   {
-    "name": "Random"
+    "name": "Random",
+    "color":  "none"
   }
 ]

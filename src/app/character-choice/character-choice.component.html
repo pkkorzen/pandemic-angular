@@ -12,7 +12,7 @@
   </div>
   <div class="label">
     <app-player [(ngModel)]="characterChoiceDTO.players" *ngFor="let player of characterChoiceDTO.playerNumber|times
-    let x = index" [player]="characterChoiceDTO.players[x]" [charactersMap]="charactersMap"></app-player>
+    let x = index" [player]="characterChoiceDTO.players[x]"></app-player>
   </div><br>
   <div class="form-group flex-row">
     <label class="label" for="pandemicNumber">Number of pandemic cards: &nbsp;</label>

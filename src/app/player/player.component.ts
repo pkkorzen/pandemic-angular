@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import characters from '../../assets/characters.json';
 import {Player} from '../player';
 import {Character} from '../character';
+import {CharacterService} from '../services/character.service';
 
 @Component({
   selector: 'app-player',
@@ -15,7 +16,8 @@ export class PlayerComponent implements OnInit {
   charactersMap: Map<string, Character>;
   characters = characters;
 
-  constructor() {
+  constructor(private characterService: CharacterService) {
+    this.charactersMap = this.characterService.getCharactersMap();
   }
 
   ngOnInit() {

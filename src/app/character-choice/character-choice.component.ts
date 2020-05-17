@@ -5,6 +5,7 @@ import {Character} from '../character';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CharacterChoiceDTO} from '../character-choice-dto';
 import {CharacterChoiceService} from '../services/character-choice.service';
+import {CharacterService} from '../services/character.service';
 
 @Component({
   selector: 'app-character-choice',
@@ -12,20 +13,15 @@ import {CharacterChoiceService} from '../services/character-choice.service';
   styleUrls: ['./character-choice.component.css']
 })
 export class CharacterChoiceComponent implements OnInit {
-  charactersMap: Map<string, Character>;
   maxPandemicCards: number[];
   maxPlayers: number[];
   characterChoiceDTO: CharacterChoiceDTO;
 
-  constructor(private route: ActivatedRoute, private router: Router, private characterChoiceService: CharacterChoiceService) {
+  constructor(private route: ActivatedRoute, private router: Router, private characterChoiceService: CharacterChoiceService,
+              private characterService: CharacterService) {
     this.characterChoiceDTO = new CharacterChoiceDTO();
     this.characterChoiceDTO.playerNumber = 2;
     this.characterChoiceDTO.pandemicNumber = 5;
-    this.charactersMap = new Map<string, Character>();
-    for (const character of characters) {
-      this.charactersMap.set(character.name, new Character(character.name, '../../assets/img/characters/'
-        + character.name.toLowerCase() + '.png', true));
-    }
     this.maxPlayers = this.fillInArray(2, 3);
     this.maxPandemicCards = this.fillInArray(4, 3);
     this.characterChoiceDTO.players = new Array(4);
