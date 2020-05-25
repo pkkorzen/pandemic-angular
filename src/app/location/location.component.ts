@@ -1,5 +1,7 @@
 import {Component, Input, ElementRef, OnInit, AfterViewInit} from '@angular/core';
 import {PointCoordinatesService} from '../point-coordinates.service';
+import {MoveService} from '../services/move.service';
+import {Router} from '@angular/router';
 
 // @ts-ignore
 
@@ -23,7 +25,8 @@ export class LocationComponent implements OnInit {
   class: string;
   locationNameLeft: string;
   locationNameTop: string;
-  constructor(private el: ElementRef, private pointCoordinatesService: PointCoordinatesService) {
+  constructor(private el: ElementRef, private pointCoordinatesService: PointCoordinatesService, private moveService: MoveService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -56,7 +59,17 @@ export class LocationComponent implements OnInit {
     this.locationNameLeft = x1.toString() + 'px';
     this.locationNameTop = y1.toString() + 'px';
   }
+
   onResize() {
     this.createLine();
   }
+
+  move() {
+    this.moveService.move(this.name).subscribe(result => this.refresh);
+  }
+
+  refresh() {
+    this.router.navigate(['/game']);
+  }
+
 }

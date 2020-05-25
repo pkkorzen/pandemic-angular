@@ -1,4 +1,4 @@
-<div [id]="name" [className]="'btn ' + class + ' btn-circle btn-sm location'" [style.top]="top" [style.left]="left">
+<div [id]="name" [className]="'btn ' + class + ' btn-circle btn-sm location'" (click)="move()" [style.top]="top" [style.left]="left">
 </div>
 <div class="location-name-below" (window:resize)="onResize()" [style.top]="locationNameTop"
      [style.left]="locationNameLeft">{{name}}
